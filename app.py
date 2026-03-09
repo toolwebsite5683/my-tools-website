@@ -6,8 +6,8 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route("/password")
-def password():
+@app.route("/generate-password")
+def generate_password():
     return render_template("password.html")
 
 @app.route("/wordcounter")
@@ -63,3 +63,4 @@ def password():
         password ="".join(random.choice(characters) for i in range(length))
 
         return render_template("password.html", password=password)
+
